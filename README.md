@@ -1,4 +1,5 @@
 # ensayo2joserubencerrada
+## 18 julio 2020  Hora inicio 10:00 Hora final: 17:00
 
 ## Project setup
 ```

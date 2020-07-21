@@ -44,7 +44,7 @@ export default new Vuex.Store({
     },
     guardarComentariosPersonajes(state, MisComentarios){
       state.comentarios.unshift(MisComentarios);
-      console.log(state.comentarios);
+      //console.log(state.comentarios);
     },
     agregarMisFavoritos(state, informacionMisFavoritos){    // 
       state.misfavoritos.unshift(informacionMisFavoritos);  // 
@@ -55,9 +55,20 @@ export default new Vuex.Store({
     quitarComentario(state,id){
       state.comentarios.splice(id,1);
     },
-    reiniciarcomentarios(state){
-      state.comentarios.push=['']; 
-    }
+    reiniciarcomentarios(state){      
+      state.comentarios=[]; 
+    },
+    editarComentario(state, dataEdicionComentario){
+      
+      //console.log('id desde la edicion ==>'+dataEdicionComentario.commentario);
+      //console.log(dataEdicionComentario);
+      
+      let idbuscado = state.comentarios.find(dato=>parseInt(dato.id) === parseInt(dataEdicionComentario.id)); 
+      idbuscado.comment = dataEdicionComentario.commentario
+      //console.log(state.comentarios);
+
+    },
+    
 
   },
 //****************************************************** */
@@ -80,8 +91,11 @@ export default new Vuex.Store({
     quitarComentario(context, id){
       context.commit('quitarComentario', id)
     },
-    reiniciarcomentarios(context){
+    reiniciarcomentarios(context){      
       context.commit('reiniciarcomentarios')
+    },
+    editarComentario(context, edicionComentario){      
+      context.commit('editarComentario', edicionComentario)       
     }
     
 

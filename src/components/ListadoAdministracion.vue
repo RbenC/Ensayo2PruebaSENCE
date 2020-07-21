@@ -38,7 +38,7 @@
         <div v-else>
             <b-card 
                 title="Sin Comentarios"
-                img-src="https://lh3.googleusercontent.com/proxy/6_vHEDPTQD-wnk_yRUmj-hv968HO_UhwjTVTlX3T_rk2X6O4WrwWsckpTO5m7PJA_2hSFzrfHcP29KFelRLckT80caZwg0QvqeBrnC25exCa7cdCifb4U1DXvdg0RhzRg69plltBZ2Z51X6mrkNzFcJ7gyc"
+                img-src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRyYCCiyvX3t8URC9CbadpQNu7mEA-TllzMEQ&usqp=CAU"
                 img-alt="Image"
                 img-top
                 tag="article"
@@ -54,8 +54,8 @@
              
         </div>
     
-    <div class="text-center">
-        <button class="btn btn-primary" @click="reiniciar">Reiniciar Arrgelo</button>
+    <div v-if="cantidadMisComentarios.length>0" class="text-center">
+        <button class="btn btn-primary"  @click="reiniciar">Reiniciar Arreglo de Comentarios</button>
     </div>
   
 
@@ -81,7 +81,9 @@ export default {
             cantidadMisComentarios:0,
             pageOfItems: [],
             customLabels,
-            reinicio:0
+            reinicio:0,
+            activarborrado:'No',
+
         }
     },    
     computed:{
@@ -115,18 +117,41 @@ export default {
             this.pageOfItems = pageOfItems;
         },
         reiniciar(){
-            this.reinicio=1
+             this.activarborrado='Si';
+             //console.log("comentarios en blanco "+this.activarborrado)
+              //this.$emit('ordendereiniciar',this.comentarios);
+
+             Swal.fire({
+                title: 'Esta seguro ?',
+                text: "Desea Reiniciar el Arreglo ?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si'
+                }).then((result) => {
+                    if (result.value) {
+                        this.$emit('ordendereiniciar',this.activarborrado);
+                        //this.cantidadMisComentarios=0;
+                    }
+                })
+            
         }
     },
     mounted() {
         this.cantidadMisComentarios = this.$store.getters.enviarDataComentariosPersonajes;
-        this.$emit('ordendereiniciar',this.reinicio);
+       // this.$emit('ordendereiniciar',this.reinicio);
+
     }
 
 
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+
+.table-hover tbody tr:hover td {  // color fondo hover tabla
+  background-color: #6ed1d1;
+}
 
 </style>

@@ -13,6 +13,15 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import accounting from 'accounting';
 import JwPagination  from 'jw-vue-pagination';
 
+// //**para hacer Deploy */
+// import firebase from 'firebase';
+// import { firebaseConfig } from './configuracion/firebaseConfig.js';
+// // Initialize Firebase
+//  firebase.initializeApp(firebaseConfig);
+//  export const db = firebase.firestore();
+// //**para hacer Deploy */
+
+
 // Install BootstrapVue
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin

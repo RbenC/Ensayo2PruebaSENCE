@@ -1,7 +1,7 @@
 <template>  
     <div class="container mt-5 pt-5 mb-5 pb-5">  
     <div class="row">    
-        <div v-for="(personaje, index) in traerDataComics" :key="index" class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+        <div v-for="(personaje, index) in traerDataComics" :key="index" class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">            
             <b-card-group deck >
                 <b-card 
                     :title="personaje.name" 
@@ -85,7 +85,7 @@ export default {
     methods:{
           guardarComentariosPersonajes(personaje){
             if(this.txtcomentario.length > 20 && this.txtcomentario.length <= 480 && this.nombre.length > 2 && this.nombre.length <= 20 ){
-                console.log("si entramos")                
+                //console.log("si entramos")                
                 let auxiliarComentario={
                     id:personaje.id,                    
                     name: personaje.name,

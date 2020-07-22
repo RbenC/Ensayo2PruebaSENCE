@@ -28,7 +28,7 @@
         <div v-else>
             <b-card 
                 title="Sin Comentarios"
-                img-src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRyYCCiyvX3t8URC9CbadpQNu7mEA-TllzMEQ&usqp=CAU"
+                :img-src="imagesincomentario"
                 img-alt="Image"
                 img-top
                 tag="article"
@@ -48,11 +48,14 @@
 </template>
 
 <script>
+import SinComentario from '../assets/sincomentarios.png';
+
 export default {
     name:'ListadoMisComponentes',
     data(){
         return{
-            cantidadMisComentarios:0
+            cantidadMisComentarios:0,
+            imagesincomentario: SinComentario
         }
     },    
     computed:{

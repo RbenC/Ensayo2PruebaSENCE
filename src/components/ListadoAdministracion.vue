@@ -38,7 +38,7 @@
         <div v-else>
             <b-card 
                 title="Sin Comentarios"
-                img-src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRyYCCiyvX3t8URC9CbadpQNu7mEA-TllzMEQ&usqp=CAU"
+                :img-src="imagesincomentario"
                 img-alt="Image"
                 img-top
                 tag="article"
@@ -66,6 +66,8 @@
 
 <script>
 import Swal from 'sweetalert2'; 
+import SinComentario from '../assets/sincomentarios.png';
+
 
 const customLabels = {
     first: '<<',
@@ -83,6 +85,7 @@ export default {
             customLabels,
             reinicio:0,
             activarborrado:'No',
+            imagesincomentario: SinComentario
 
         }
     },    

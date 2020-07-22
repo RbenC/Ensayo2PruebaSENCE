@@ -24,8 +24,7 @@ export default {
        sinComentarios(nuevoValor, valorAnterior){
       console.log("El nombre pasó de ser '%s' a '%s'", valorAnterior, nuevoValor);
       if(this.sinComentarios==="Si"){
-        this.$store.dispatch('reiniciarcomentarios');
-        
+        this.$store.dispatch('reiniciarcomentarios');        
       }
     }
     }

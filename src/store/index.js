@@ -44,10 +44,13 @@ export default new Vuex.Store({
     },
     guardarComentariosPersonajes(state, MisComentarios){
       state.comentarios.unshift(MisComentarios);
-      //console.log(state.comentarios);
     },
-    agregarMisFavoritos(state, informacionMisFavoritos){    // 
-      state.misfavoritos.unshift(informacionMisFavoritos);  // 
+    agregarMisFavoritos(state, informacionMisFavoritos){    // Se hará la búsqueda del id para ver si Existe el personaje.
+      if(state.misfavoritos.find(dato=>parseInt(dato.id) === parseInt(informacionMisFavoritos.id))){
+        console.log("existe ... no se graba")
+      }else {
+        state.misfavoritos.unshift(informacionMisFavoritos);  // 
+      }
     },
     quitarFavorito(state, id){
       state.misfavoritos.splice(id,1)//Vuex   

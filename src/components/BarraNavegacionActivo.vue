@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-navbar toggleable="lg" type="dark" variant="primary" fixed="top">
-            <b-navbar-brand href="#">Rick & Morty</b-navbar-brand>
+            <router-link :to="{name:'Home'}" ><b-navbar-brand> Rick & Morty </b-navbar-brand> </router-link>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -9,7 +9,7 @@
                 <!-- Right aligned nav items -->
                 <b-navbar-nav class="ml-auto Oswald" >
                     <b-navbar-nav>
-                        <b-nav-item :to="{name:'Home'}" exact><b-icon icon="geo-alt" v-b-tooltip.hover title="Home"></b-icon>Home</b-nav-item>
+<!--                        <b-nav-item :to="{name:'Home'}" exact><b-icon icon="geo-alt" v-b-tooltip.hover title="Home"></b-icon>Home</b-nav-item> -->
                         <b-nav-item :to="{name:'MisFavoritos'}" ><b-icon icon="heart" v-b-tooltip.hover title="Favoritos"></b-icon>Favoritos</b-nav-item>
                         <b-nav-item :to="{name:'MisComentarios'}" ><b-icon icon="chat-dots-fill" v-b-tooltip.hover title="Comentarios"></b-icon>Comentarios</b-nav-item>
                         <b-nav-item :to="{name:'Administracion'}" ><b-icon icon="gear-wide" v-b-tooltip.hover title="Administracion"></b-icon>Administración</b-nav-item>

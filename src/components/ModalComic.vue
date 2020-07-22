@@ -65,6 +65,7 @@ export default {
     },
     props: [
         'index',
+        'id',
         'name',
         'image',
         'status',
@@ -76,7 +77,7 @@ export default {
     methods:{
         favoritos(){
             let auxiliarFavorito={
-                id: this.index,
+                id: this.id,
                 name: this.name,
                 image: this.image,
             }

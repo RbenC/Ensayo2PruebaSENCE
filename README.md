@@ -34,13 +34,9 @@ que los usuarios acceden a la lista de personajes de la serie animada de TV (2) 
 
 En la vista principal, los usuarios podrán ver los personajes de la serie en conjunto,
 igualmente en la vista principal, los usuarios podrán acceder a dos opciones, las
-cuales se muestran en ventanas emergentes. 
-
-La primera opción es para realizar
-una opinión sobre el personaje, por ende, en la ventana emergente el usuario
-=======
 cuales se muestran en ventanas emergentes. la primera opción es para realizar
 una opinión sobre el personaje, por ende, en la ventana emergente el usuario 
+
 podrá agregar su nombre y opinión, luego decidir si guardar la información
 suministrada (debe existir información para poder guardar), o cerrar la ventana.
 En el caso que guarde la información, automáticamente se debe redirigir a la

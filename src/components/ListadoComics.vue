@@ -34,6 +34,7 @@
 <!--Modal Ver más informacion-->    
         <ModalComic 
         :index="index"
+        :id="personaje.id"
         :name="personaje.name"
         :image="personaje.image"
         :status="personaje.status"

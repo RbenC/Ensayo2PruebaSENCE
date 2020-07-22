@@ -5,10 +5,11 @@
       <router-link to="/about">About</router-link>
     </div>-->
     <BarraNavegacionActivo></BarraNavegacionActivo>
+    <router-view/>
     <Footer></Footer>
 
 
-    <router-view/>
+    
   </div>
 </template>
 
